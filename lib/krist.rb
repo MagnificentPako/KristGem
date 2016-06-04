@@ -1,0 +1,6 @@
+require "digest"
+require "httparty"
+require "krist/kristapi"
+require "krist/kristclient"
+require "krist/kwallet"
+require "krist/reinboo"
