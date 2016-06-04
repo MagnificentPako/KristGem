@@ -15,10 +15,13 @@
 		get("addresses/#{@address}")
 	end
 
-	def sendTo(to:, amount:)
-		transactions = post("transactions", {privatekey: @privatekey, to: to, amount: amount, metadata: "Hello from the other side!"})
-		transactions["transactions"].delete_if {|key, value| !(value["from"] == @address) || !(value["to"] == address) }
-		transactions
+	def sendTo(to:, amount:, metadata: "")
+		post("transactions", {
+			privatekey: @privatekey,
+			to: to,
+			amount: amount,
+			metadata: metadata
+			})
 	end
 
 	def recentTransactions(limit: 50, offset: 0)
