@@ -9,6 +9,6 @@ Gem::Specification.new do |s|
   s.files       = ["lib/krist.rb","lib/krist/kristclient.rb","lib/krist/kwallet.rb", "lib/krist/reinboo.rb","lib/krist/kristapi.rb"]
   s.homepage    =
     'http://rubygems.org/gems/krist'
-  s.license       = 'WTFPL'
+  s.license       = 'MIT'
   s.add_runtime_dependency "httparty", "~> 0.13", ">= 0.13.7"
 end
