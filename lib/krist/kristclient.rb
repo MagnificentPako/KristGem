@@ -25,13 +25,14 @@
 		get("addresses/#{@address}/names")
 	end
 
-	def registerWebhook(event: "transaction", url:, method: "post")
+	def registerWebhook(event: "transaction", url:, method: "post", addresses: "")
 		post("webhooks", {
 			privatekey: @privatekey,
 			owner: @address,
 			event: event,
 			url: url,
-			method: method
+			method: method,
+			addresses: addresses
 			})
 	end
 

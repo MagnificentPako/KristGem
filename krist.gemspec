@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'krist'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2016-06-03'
   s.summary     = "A Ruby API for the cryptocurrency Krist"
   s.description = "IDK what I should write here"
