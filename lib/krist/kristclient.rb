@@ -11,6 +11,10 @@
 		@address
 	end
 
+	def getInfo
+		get("addresses/#{@address}")
+	end
+
 	def sendTo(to:, amount:)
 		transactions = post("transactions", {privatekey: @privatekey, to: to, amount: amount, metadata: "Hello from the other side!"})
 		transactions["transactions"].delete_if {|key, value| !(value["from"] == @address) || !(value["to"] == address) }
@@ -48,7 +52,7 @@
 		post("names/#{name}", {privatekey: @privatekey})
 	end
 
-	def updateDomainRecord(name: a:)
+	def updateDomainRecord(name:, a:)
 		post("names#{name}/update", {a: a, privatekey: @privatekey})
 	end
 
